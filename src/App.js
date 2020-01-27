@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Game from './Game'
+import Score from './Score';
 
 const value1 = Math.floor(Math.random() * 100);
 const value2 = Math.floor(Math.random() * 100);
@@ -39,6 +40,7 @@ class App extends Component {
         <div className="game">
           <h2>Mental Math</h2>
           <Game handleAnswer={this.handleAnswer}/>
+          <Score numCorrect={this.state.correctAnswer} numQuestions={this.state.numQuestions} />
         </div>
       </div>
     );
